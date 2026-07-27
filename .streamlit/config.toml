@@ -1,0 +1,126 @@
+# ---------------------------------------------------------------------------
+# Visual theme — colours, typography, radii.
+#
+# Everything that can be themed natively lives here rather than in CSS, so the
+# app code stays free of styling and light and dark modes stay in step.
+# Both modes are defined, so the Settings menu in the top-right can switch.
+# ---------------------------------------------------------------------------
+
+[theme]
+# ---- typography ----------------------------------------------------------
+font = "'Inter':https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "'Inter':https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap"
+codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+baseFontSize = 15
+baseFontWeight = 400
+codeFontSize = "0.84rem"
+headingFontSizes = ["30px", "22px", "18px", "16px", "14px", "13px"]
+headingFontWeights = [700, 600, 600, 600, 600, 600]
+linkUnderline = false
+
+# ---- shape ---------------------------------------------------------------
+baseRadius = "10px"
+buttonRadius = "8px"
+showWidgetBorder = true
+showSidebarBorder = true
+
+# ---- data visualisation --------------------------------------------------
+# Commodity series first, then the model series, so native charts inherit the
+# same identity as the Plotly figures.
+chartCategoricalColors = [
+    "#C2408A",
+    "#B0723C",
+    "#D9A404",
+    "#3B82F6",
+    "#10B981",
+    "#8B5CF6",
+    "#94A3B8",
+    "#F59E0B",
+]
+chartSequentialColors = [
+    "#EEF4FF",
+    "#D7E5FE",
+    "#B5D0FC",
+    "#8DB6F8",
+    "#6699F2",
+    "#427BE6",
+    "#2B60CC",
+    "#1E48A6",
+    "#153480",
+    "#0D2159",
+]
+
+# ===========================================================================
+# Light mode
+# ===========================================================================
+[theme.light]
+primaryColor = "#2563EB"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F6F9"
+codeBackgroundColor = "#F1F5F9"
+textColor = "#0F172A"
+linkColor = "#2563EB"
+borderColor = "#E4E8EE"
+codeTextColor = "#334155"
+
+grayColor = "#64748B"
+blueColor = "#2563EB"
+greenColor = "#0E9F6E"
+redColor = "#DC2626"
+orangeColor = "#EA7317"
+yellowColor = "#D9A404"
+violetColor = "#7C3AED"
+
+dataframeBorderColor = "#E4E8EE"
+dataframeHeaderBackgroundColor = "#F4F6F9"
+
+[theme.light.sidebar]
+backgroundColor = "#F8FAFC"
+secondaryBackgroundColor = "#EEF2F7"
+codeBackgroundColor = "#EEF2F7"
+textColor = "#0F172A"
+borderColor = "#E2E8F0"
+primaryColor = "#2563EB"
+dataframeHeaderBackgroundColor = "#EEF2F7"
+dataframeBorderColor = "#E2E8F0"
+
+# ===========================================================================
+# Dark mode
+# ===========================================================================
+[theme.dark]
+primaryColor = "#60A5FA"
+backgroundColor = "#0B1220"
+secondaryBackgroundColor = "#141D2E"
+codeBackgroundColor = "#141D2E"
+textColor = "#E6EDF6"
+linkColor = "#7DB4FF"
+borderColor = "#25314A"
+codeTextColor = "#CBD5E1"
+
+grayColor = "#8A99AE"
+blueColor = "#60A5FA"
+greenColor = "#34D399"
+redColor = "#F87171"
+orangeColor = "#FB923C"
+yellowColor = "#FBBF24"
+violetColor = "#A78BFA"
+
+dataframeBorderColor = "#25314A"
+dataframeHeaderBackgroundColor = "#141D2E"
+
+[theme.dark.sidebar]
+backgroundColor = "#0E1626"
+secondaryBackgroundColor = "#1A2437"
+codeBackgroundColor = "#1A2437"
+textColor = "#E6EDF6"
+borderColor = "#25314A"
+primaryColor = "#60A5FA"
+dataframeHeaderBackgroundColor = "#1A2437"
+dataframeBorderColor = "#25314A"
+
+[server]
+maxUploadSize = 50
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false

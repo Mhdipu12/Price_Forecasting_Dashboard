@@ -1,0 +1,273 @@
+{
+  "project": "BD Essential Commodity Price & Inflation Forecasting (DEMO DATA)",
+  "generated_at": "2026-07-25T14:11:09.552749",
+  "seed": 42,
+  "lookback": 30,
+  "feature_columns": [
+    "year",
+    "month",
+    "week",
+    "day",
+    "dayofweek",
+    "dayofyear",
+    "quarter",
+    "is_weekend",
+    "is_month_start",
+    "is_month_end",
+    "month_sin",
+    "month_cos",
+    "doy_sin",
+    "doy_cos",
+    "dow_sin",
+    "dow_cos",
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_7",
+    "lag_14",
+    "lag_30",
+    "roll_mean_7",
+    "roll_median_7",
+    "roll_max_7",
+    "roll_min_7",
+    "roll_std_7",
+    "roll_range_7",
+    "roll_mean_14",
+    "roll_median_14",
+    "roll_max_14",
+    "roll_min_14",
+    "roll_std_14",
+    "roll_range_14",
+    "roll_mean_30",
+    "roll_median_30",
+    "roll_max_30",
+    "roll_min_30",
+    "roll_std_30",
+    "roll_range_30",
+    "ema_7",
+    "lag1_over_ema_7",
+    "ema_30",
+    "lag1_over_ema_30",
+    "pct_change_1",
+    "pct_change_7",
+    "pct_change_30",
+    "log_return_1",
+    "diff_1",
+    "diff_7",
+    "inflation_daily",
+    "inflation_weekly",
+    "inflation_monthly",
+    "inflation_annual",
+    "volatility_7",
+    "volatility_30"
+  ],
+  "horizons": [
+    30,
+    60
+  ],
+  "test_days": 180,
+  "demo": true,
+  "commodities": {
+    "Onion": {
+      "best_model": "XGBoost",
+      "data_start": "2021-05-13",
+      "data_end": "2026-07-25",
+      "n_observations": 1900,
+      "last_price": 89.98,
+      "sarima": {
+        "path": "artifacts/models/sarima/Onion_sarima.pkl",
+        "order": [
+          1,
+          1,
+          1
+        ],
+        "seasonal_order": [
+          1,
+          0,
+          1,
+          7
+        ],
+        "aic": 4200.0
+      },
+      "xgboost": {
+        "path": "artifacts/models/xgboost/Onion_xgboost.json",
+        "params": {}
+      },
+      "lstm": {
+        "path": "artifacts/models/lstm/Onion_lstm.keras",
+        "scaler": "artifacts/scalers/Onion_minmax_scaler.pkl",
+        "lookback": 30,
+        "best_epoch": 40
+      },
+      "residual_std": "artifacts/metrics/Onion_residual_std.json",
+      "metrics": {
+        "SARIMA": {
+          "MAE": 2.1823677686976075,
+          "RMSE": 2.7086658564468524,
+          "MAPE_%": 2.967684386709847,
+          "sMAPE_%": 2.973603151911809,
+          "R2": 0.8667231302512493,
+          "skill_vs_naive_%": -53.18444796660795
+        },
+        "XGBoost": {
+          "MAE": 1.884225484213606,
+          "RMSE": 2.366729697815166,
+          "MAPE_%": 2.5654132390537043,
+          "sMAPE_%": 2.576598469264412,
+          "R2": 0.8982484021260848,
+          "skill_vs_naive_%": -32.25728714648617
+        },
+        "LSTM": {
+          "MAE": 2.2395958188616256,
+          "RMSE": 2.7513041117752572,
+          "MAPE_%": 3.0665734700714444,
+          "sMAPE_%": 3.0545545268541563,
+          "R2": 0.8624941700587976,
+          "skill_vs_naive_%": -57.20139112271592
+        },
+        "Seasonal Naive": {
+          "MAE": 1.4246666666666663,
+          "RMSE": 1.7612788914119568,
+          "MAPE_%": 1.9156344600460518,
+          "sMAPE_%": 1.929320491731747,
+          "R2": 0.9436491881108355,
+          "skill_vs_naive_%": 0.0
+        }
+      }
+    },
+    "Potato": {
+      "best_model": "SARIMA",
+      "data_start": "2021-05-13",
+      "data_end": "2026-07-25",
+      "n_observations": 1900,
+      "last_price": 43.8,
+      "sarima": {
+        "path": "artifacts/models/sarima/Potato_sarima.pkl",
+        "order": [
+          1,
+          1,
+          1
+        ],
+        "seasonal_order": [
+          1,
+          0,
+          1,
+          7
+        ],
+        "aic": 4330.0
+      },
+      "xgboost": {
+        "path": "artifacts/models/xgboost/Potato_xgboost.json",
+        "params": {}
+      },
+      "lstm": {
+        "path": "artifacts/models/lstm/Potato_lstm.keras",
+        "scaler": "artifacts/scalers/Potato_minmax_scaler.pkl",
+        "lookback": 30,
+        "best_epoch": 46
+      },
+      "residual_std": "artifacts/metrics/Potato_residual_std.json",
+      "metrics": {
+        "SARIMA": {
+          "MAE": 0.7094698475549774,
+          "RMSE": 0.9272457071505381,
+          "MAPE_%": 1.9582237481297955,
+          "sMAPE_%": 1.9555427848483156,
+          "R2": 0.9154516085468537,
+          "skill_vs_naive_%": -20.9896471434353
+        },
+        "XGBoost": {
+          "MAE": 0.9974429489450178,
+          "RMSE": 1.2536210681010196,
+          "MAPE_%": 2.790827367224202,
+          "sMAPE_%": 2.784541433516549,
+          "R2": 0.8454573869516303,
+          "skill_vs_naive_%": -70.09922388451277
+        },
+        "LSTM": {
+          "MAE": 0.8330725956468544,
+          "RMSE": 1.0546879354033025,
+          "MAPE_%": 2.3194995006297376,
+          "sMAPE_%": 2.3178045407239414,
+          "R2": 0.8906135210451833,
+          "skill_vs_naive_%": -42.06827779861091
+        },
+        "Seasonal Naive": {
+          "MAE": 0.5863888888888888,
+          "RMSE": 0.7398457046348698,
+          "MAPE_%": 1.5871628860241724,
+          "sMAPE_%": 1.5966335206288547,
+          "R2": 0.9461732695994198,
+          "skill_vs_naive_%": 0.0
+        }
+      }
+    },
+    "Soybean_Oil": {
+      "best_model": "XGBoost",
+      "data_start": "2021-05-13",
+      "data_end": "2026-07-25",
+      "n_observations": 1900,
+      "last_price": 207.72,
+      "sarima": {
+        "path": "artifacts/models/sarima/Soybean_Oil_sarima.pkl",
+        "order": [
+          1,
+          1,
+          1
+        ],
+        "seasonal_order": [
+          1,
+          0,
+          1,
+          7
+        ],
+        "aic": 4460.0
+      },
+      "xgboost": {
+        "path": "artifacts/models/xgboost/Soybean_Oil_xgboost.json",
+        "params": {}
+      },
+      "lstm": {
+        "path": "artifacts/models/lstm/Soybean_Oil_lstm.keras",
+        "scaler": "artifacts/scalers/Soybean_Oil_minmax_scaler.pkl",
+        "lookback": 30,
+        "best_epoch": 52
+      },
+      "residual_std": "artifacts/metrics/Soybean_Oil_residual_std.json",
+      "metrics": {
+        "SARIMA": {
+          "MAE": 1.7447649988957823,
+          "RMSE": 2.160448735424728,
+          "MAPE_%": 0.8998745004805568,
+          "sMAPE_%": 0.8996009652426138,
+          "R2": 0.8881937141639603,
+          "skill_vs_naive_%": 10.284608409632357
+        },
+        "XGBoost": {
+          "MAE": 1.489507887036001,
+          "RMSE": 1.8380659685718324,
+          "MAPE_%": 0.7695545890940101,
+          "sMAPE_%": 0.7691302439362817,
+          "R2": 0.9190716887374044,
+          "skill_vs_naive_%": 23.409866975238437
+        },
+        "LSTM": {
+          "MAE": 1.5904307092474652,
+          "RMSE": 2.064582331510184,
+          "MAPE_%": 0.8207056211749277,
+          "sMAPE_%": 0.8193358775383432,
+          "R2": 0.897896012684914,
+          "skill_vs_naive_%": 18.220440020412532
+        },
+        "Seasonal Naive": {
+          "MAE": 1.9447777777777768,
+          "RMSE": 2.422721839401112,
+          "MAPE_%": 1.0019309982447109,
+          "sMAPE_%": 1.0044026954217788,
+          "R2": 0.8593999749701261,
+          "skill_vs_naive_%": 0.0
+        }
+      }
+    }
+  }
+}
