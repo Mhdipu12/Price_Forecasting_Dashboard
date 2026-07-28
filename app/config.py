@@ -54,56 +54,80 @@ PATHS = {
 # Palette — each commodity wears its own colour, taken from the thing itself.
 #
 # Every value is a mid-tone chosen to stay legible on both the light and the
-# dark canvas, so one categorical palette serves both modes.
+# dark canvas, so one categorical palette serves both modes. The three aurora
+# hues (violet, cyan, magenta) are the signature of the interface: they light
+# the page background, the brand mark and every gradient in the chrome.
 # --------------------------------------------------------------------------
 PALETTE = {
-    "ink":     "#0F172A",   # deep slate — headings, dark surfaces
+    "ink":     "#0B1020",   # deep space — headings, dark surfaces
     "paper":   "#FFFFFF",   # page canvas
-    "rule":    "#E4E8EE",   # hairline dividers
-    "muted":   "#64748B",   # secondary text
-    "onion":   "#C2408A",   # onion skin
-    "potato":  "#B0723C",   # earth ochre
-    "oil":     "#D9A404",   # golden amber
-    "sage":    "#0E9F6E",   # prices falling / good news
-    "alert":   "#DC2626",   # prices rising / warning
-    "slate":   "#3B82F6",   # neutral series (baseline, SARIMA)
+    "rule":    "#E3E7F7",   # hairline dividers
+    "muted":   "#6B7699",   # secondary text
+    "onion":   "#E0459B",   # onion skin
+    "potato":  "#C98A3E",   # earth ochre
+    "oil":     "#E5B00A",   # golden amber
+    "sage":    "#10B981",   # prices falling / good news
+    "alert":   "#F43F5E",   # prices rising / warning
+    "slate":   "#6366F1",   # neutral series (baseline, SARIMA)
+    "violet":  "#8B5CF6",   # aurora — primary light
+    "cyan":    "#22D3EE",   # aurora — cool light
+    "magenta": "#EC4899",   # aurora — warm light
 }
 
 # Surface tokens per appearance mode. `theme.py` turns these into CSS custom
 # properties and `charts.py` reads them for gridlines and axis text, so the
 # figures and the page furniture never drift apart.
+#
+# `aurora_*` are the three light sources painted behind the whole page, and
+# `glass*` describe the frosted panes that float on top of them.
 SURFACE = {
     "light": {
-        "canvas":       "#FFFFFF",
+        "canvas":       "#F5F7FF",
         "surface":      "#FFFFFF",
-        "surface_alt":  "#F8FAFC",
-        "border":       "#E4E8EE",
-        "border_bold":  "#CBD5E1",
-        "grid":         "#EDF1F6",
-        "axis":         "#CBD5E1",
-        "text":         "#0F172A",
-        "text_soft":    "#475569",
-        "muted":        "#64748B",
-        "accent":       "#2563EB",
-        "positive":     "#047857",
-        "negative":     "#C2261E",
+        "surface_alt":  "#F0F3FE",
+        "border":       "#E3E7F7",
+        "border_bold":  "#C6CCEA",
+        "grid":         "#EAEDFB",
+        "axis":         "#C6CCEA",
+        "text":         "#101736",
+        "text_soft":    "#454E72",
+        "muted":        "#6B7699",
+        "accent":       "#6D4AFF",
+        "positive":     "#059669",
+        "negative":     "#E11D48",
         "hover_bg":     "#FFFFFF",
+        "aurora_1":     "rgba(139,92,246,0.22)",
+        "aurora_2":     "rgba(34,211,238,0.17)",
+        "aurora_3":     "rgba(236,72,153,0.15)",
+        "glass":        "rgba(255,255,255,0.68)",
+        "glass_strong": "rgba(255,255,255,0.82)",
+        "glass_border": "rgba(16,23,54,0.09)",
+        "hairline":     "rgba(255,255,255,0.85)",
+        "grain":        "0.030",
     },
     "dark": {
-        "canvas":       "#0B1220",
-        "surface":      "#141D2E",
-        "surface_alt":  "#0F1828",
-        "border":       "#25314A",
-        "border_bold":  "#35435F",
-        "grid":         "#1E2A40",
-        "axis":         "#35435F",
-        "text":         "#E6EDF6",
-        "text_soft":    "#B6C2D4",
-        "muted":        "#8A99AE",
-        "accent":       "#60A5FA",
+        "canvas":       "#060912",
+        "surface":      "#101A2E",
+        "surface_alt":  "#0C1424",
+        "border":       "#26314D",
+        "border_bold":  "#3A4870",
+        "grid":         "#1A2437",
+        "axis":         "#35446B",
+        "text":         "#E9EEFC",
+        "text_soft":    "#B4C0DA",
+        "muted":        "#8593B4",
+        "accent":       "#A78BFA",
         "positive":     "#34D399",
-        "negative":     "#F87171",
-        "hover_bg":     "#141D2E",
+        "negative":     "#FB7185",
+        "hover_bg":     "#0F1930",
+        "aurora_1":     "rgba(124,58,237,0.42)",
+        "aurora_2":     "rgba(34,211,238,0.26)",
+        "aurora_3":     "rgba(236,72,153,0.24)",
+        "glass":        "rgba(255,255,255,0.045)",
+        "glass_strong": "rgba(255,255,255,0.075)",
+        "glass_border": "rgba(255,255,255,0.10)",
+        "hairline":     "rgba(255,255,255,0.14)",
+        "grain":        "0.055",
     },
 }
 
@@ -120,9 +144,9 @@ COMMODITY_STYLE = {
 }
 
 MODEL_STYLE = {
-    "SARIMA":         {"color": "#3B82F6"},
+    "SARIMA":         {"color": "#6366F1"},
     "XGBoost":        {"color": "#10B981"},
-    "LSTM":           {"color": "#8B5CF6"},
+    "LSTM":           {"color": "#A855F7"},
     "Seasonal Naive": {"color": "#94A3B8"},
 }
 

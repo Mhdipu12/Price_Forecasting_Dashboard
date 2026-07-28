@@ -19,8 +19,8 @@ headingFontWeights = [700, 600, 600, 600, 600, 600]
 linkUnderline = false
 
 # ---- shape ---------------------------------------------------------------
-baseRadius = "10px"
-buttonRadius = "8px"
+baseRadius = "14px"
+buttonRadius = "10px"
 showWidgetBorder = true
 showSidebarBorder = true
 
@@ -28,95 +28,96 @@ showSidebarBorder = true
 # Commodity series first, then the model series, so native charts inherit the
 # same identity as the Plotly figures.
 chartCategoricalColors = [
-    "#C2408A",
-    "#B0723C",
-    "#D9A404",
-    "#3B82F6",
+    "#E0459B",
+    "#C98A3E",
+    "#E5B00A",
+    "#6366F1",
     "#10B981",
-    "#8B5CF6",
+    "#A855F7",
     "#94A3B8",
-    "#F59E0B",
+    "#22D3EE",
 ]
+# An aurora ramp: pale violet through indigo into deep space.
 chartSequentialColors = [
-    "#EEF4FF",
-    "#D7E5FE",
-    "#B5D0FC",
-    "#8DB6F8",
-    "#6699F2",
-    "#427BE6",
-    "#2B60CC",
-    "#1E48A6",
-    "#153480",
-    "#0D2159",
+    "#F3EEFF",
+    "#E3D8FE",
+    "#CDBBFC",
+    "#B29AF8",
+    "#9878F2",
+    "#7C5CE6",
+    "#6141CC",
+    "#4A2FA6",
+    "#341F80",
+    "#1E1259",
 ]
 
 # ===========================================================================
 # Light mode
 # ===========================================================================
 [theme.light]
-primaryColor = "#2563EB"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F4F6F9"
-codeBackgroundColor = "#F1F5F9"
-textColor = "#0F172A"
-linkColor = "#2563EB"
-borderColor = "#E4E8EE"
-codeTextColor = "#334155"
+primaryColor = "#6D4AFF"
+backgroundColor = "#F5F7FF"
+secondaryBackgroundColor = "#ECEFFC"
+codeBackgroundColor = "#EEF1FD"
+textColor = "#101736"
+linkColor = "#6D4AFF"
+borderColor = "#E3E7F7"
+codeTextColor = "#3B4570"
 
-grayColor = "#64748B"
-blueColor = "#2563EB"
-greenColor = "#0E9F6E"
-redColor = "#DC2626"
+grayColor = "#6B7699"
+blueColor = "#4F46E5"
+greenColor = "#059669"
+redColor = "#E11D48"
 orangeColor = "#EA7317"
-yellowColor = "#D9A404"
-violetColor = "#7C3AED"
+yellowColor = "#E5B00A"
+violetColor = "#8B5CF6"
 
-dataframeBorderColor = "#E4E8EE"
-dataframeHeaderBackgroundColor = "#F4F6F9"
+dataframeBorderColor = "#E3E7F7"
+dataframeHeaderBackgroundColor = "#ECEFFC"
 
 [theme.light.sidebar]
-backgroundColor = "#F8FAFC"
-secondaryBackgroundColor = "#EEF2F7"
-codeBackgroundColor = "#EEF2F7"
-textColor = "#0F172A"
-borderColor = "#E2E8F0"
-primaryColor = "#2563EB"
-dataframeHeaderBackgroundColor = "#EEF2F7"
-dataframeBorderColor = "#E2E8F0"
+backgroundColor = "#F0F3FE"
+secondaryBackgroundColor = "#E6EAFA"
+codeBackgroundColor = "#E6EAFA"
+textColor = "#101736"
+borderColor = "#DDE2F5"
+primaryColor = "#6D4AFF"
+dataframeHeaderBackgroundColor = "#E6EAFA"
+dataframeBorderColor = "#DDE2F5"
 
 # ===========================================================================
 # Dark mode
 # ===========================================================================
 [theme.dark]
-primaryColor = "#60A5FA"
-backgroundColor = "#0B1220"
-secondaryBackgroundColor = "#141D2E"
-codeBackgroundColor = "#141D2E"
-textColor = "#E6EDF6"
-linkColor = "#7DB4FF"
-borderColor = "#25314A"
+primaryColor = "#7C5CFF"
+backgroundColor = "#060912"
+secondaryBackgroundColor = "#101A2E"
+codeBackgroundColor = "#0C1424"
+textColor = "#E9EEFC"
+linkColor = "#C4B5FD"
+borderColor = "#26314D"
 codeTextColor = "#CBD5E1"
 
-grayColor = "#8A99AE"
-blueColor = "#60A5FA"
+grayColor = "#8593B4"
+blueColor = "#818CF8"
 greenColor = "#34D399"
-redColor = "#F87171"
+redColor = "#FB7185"
 orangeColor = "#FB923C"
 yellowColor = "#FBBF24"
 violetColor = "#A78BFA"
 
-dataframeBorderColor = "#25314A"
-dataframeHeaderBackgroundColor = "#141D2E"
+dataframeBorderColor = "#26314D"
+dataframeHeaderBackgroundColor = "#101A2E"
 
 [theme.dark.sidebar]
-backgroundColor = "#0E1626"
-secondaryBackgroundColor = "#1A2437"
-codeBackgroundColor = "#1A2437"
-textColor = "#E6EDF6"
-borderColor = "#25314A"
-primaryColor = "#60A5FA"
-dataframeHeaderBackgroundColor = "#1A2437"
-dataframeBorderColor = "#25314A"
+backgroundColor = "#080D1A"
+secondaryBackgroundColor = "#141F36"
+codeBackgroundColor = "#0C1424"
+textColor = "#E9EEFC"
+borderColor = "#26314D"
+primaryColor = "#A78BFA"
+dataframeHeaderBackgroundColor = "#141F36"
+dataframeBorderColor = "#26314D"
 
 [server]
 maxUploadSize = 50

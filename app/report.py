@@ -48,8 +48,8 @@ def build_zip(files: dict[str, bytes]) -> bytes:
 # HTML report
 # --------------------------------------------------------------------------
 _REPORT_CSS = """
-:root { --ink:#0F172A; --soft:#475569; --muted:#64748B; --rule:#E4E8EE;
-        --surface:#F8FAFC; --accent:#2563EB; --sage:#047857; --alert:#C2261E; }
+:root { --ink:#101736; --soft:#454E72; --muted:#6B7699; --rule:#E3E7F7;
+        --surface:#F0F3FE; --accent:#6D4AFF; --sage:#059669; --alert:#E11D48; }
 * { box-sizing: border-box; }
 body { font-family: Inter, -apple-system, Segoe UI, sans-serif; color: var(--ink);
        max-width: 960px; margin: 0 auto; padding: 48px 30px 84px; line-height: 1.62;
@@ -60,9 +60,12 @@ h2 { font-size: 1.16rem; font-weight: 600; letter-spacing:-0.014em;
      border-bottom: 1px solid var(--rule); }
 h3 { font-size: 1rem; font-weight: 600; margin: 1.6rem 0 .4rem; }
 .eyebrow { display:inline-block; font-size:.68rem; font-weight:600;
-           letter-spacing:.11em; text-transform:uppercase; color: var(--accent);
-           background:rgba(37,99,235,.10); border:1px solid rgba(37,99,235,.26);
-           padding:.2rem .55rem; border-radius:999px; margin-bottom:.7rem; }
+           letter-spacing:.12em; text-transform:uppercase; color: var(--accent);
+           background:rgba(109,74,255,.10); border:1px solid rgba(109,74,255,.28);
+           padding:.22rem .6rem; border-radius:999px; margin-bottom:.7rem; }
+h1 { background:linear-gradient(96deg,var(--ink) 6%,var(--accent) 78%);
+     -webkit-background-clip:text; background-clip:text; color:transparent; }
+@media print { h1 { color: var(--ink); -webkit-text-fill-color: currentColor; } }
 .lede { color: var(--muted); font-size:.94rem; margin:.45rem 0 0; }
 table { border-collapse: collapse; width: 100%; margin: .85rem 0 1.3rem; font-size:.86rem; }
 th, td { text-align: left; padding: .52rem .65rem; border-bottom: 1px solid var(--rule); }
